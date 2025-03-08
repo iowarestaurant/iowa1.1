@@ -5,7 +5,6 @@ import WhatsAppButton from "./components/whatsapp-button"
 import type { Metadata } from "next"
 import SkipToContent from "./components/accessibility/skip-to-content"
 import A11yAnnouncer from "./components/accessibility/a11y-announcer"
-import AnalyticsProvider from "./components/analytics/analytics-provider"
 
 // Optimizar carga de fuentes
 const inter = Inter({
