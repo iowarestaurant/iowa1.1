@@ -9,8 +9,9 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
   },
+  // Desactivar optimizaciones experimentales que causan problemas
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Eliminado para evitar el error de critters
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
   // Configuración para mejorar el rendimiento
@@ -19,13 +20,12 @@ const nextConfig = {
       exclude: ['error', 'warn'],
     } : false,
   },
-  // Configuración para mejorar la accesibilidad
+  // Ignorar errores durante la compilación
   eslint: {
-    ignoreDuringBuilds: true, // Ignorar errores de ESLint durante la compilación
-    dirs: ['app', 'components', 'lib', 'utils'],
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true, // Ignorar errores de TypeScript durante la compilación
+    ignoreBuildErrors: true,
   },
   // Configuración de seguridad
   headers: async () => {
