@@ -4,6 +4,13 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
+// Extender el tipo Window para incluir gtag
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void
+  }
+}
+
 export default function CookieConsent() {
   const [showConsent, setShowConsent] = useState(false)
   const [hasConsented, setHasConsented] = useState(false)
@@ -29,10 +36,14 @@ export default function CookieConsent() {
     setShowConsent(false)
 
     // Enable analytics if accepted
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("consent", "update", {
-        analytics_storage: "granted",
-      })
+    try {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("consent", "update", {
+          analytics_storage: "granted",
+        })
+      }
+    } catch (error) {
+      console.debug("Error updating consent:", error)
     }
   }
 
@@ -42,10 +53,14 @@ export default function CookieConsent() {
     setShowConsent(false)
 
     // Disable analytics if rejected
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("consent", "update", {
-        analytics_storage: "denied",
-      })
+    try {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("consent", "update", {
+          analytics_storage: "denied",
+        })
+      }
+    } catch (error) {
+      console.debug("Error updating consent:", error)
     }
   }
 
