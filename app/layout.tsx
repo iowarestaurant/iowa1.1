@@ -3,8 +3,6 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import WhatsAppButton from "./components/whatsapp-button"
 import type { Metadata } from "next"
-import SkipToContent from "./components/accessibility/skip-to-content"
-import A11yAnnouncer from "./components/accessibility/a11y-announcer"
 
 // Optimizar carga de fuentes
 const inter = Inter({
@@ -98,7 +96,6 @@ export const metadata: Metadata = {
     google: "verificación-google",
   },
   category: "restaurant",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -185,13 +182,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
-        {/* Componentes de accesibilidad */}
-        <SkipToContent />
-        <A11yAnnouncer />
-
-        {/* Analytics */}
-        <AnalyticsProvider />
-
         {/* Contenido principal */}
         <main id="main-content">{children}</main>
 
@@ -201,6 +191,3 @@ export default function RootLayout({
   )
 }
 
-
-
-import './globals.css'
