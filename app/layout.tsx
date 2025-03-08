@@ -117,7 +117,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://images.unsplash.com" />
 
         {/* Asegurar que los estilos se carguen correctamente */}
-        <link rel="stylesheet" href="/_next/static/css/app/globals.css" />
 
         {/* SEO Local - Schema.org para Restaurante */}
         <script
