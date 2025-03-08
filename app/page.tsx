@@ -15,11 +15,6 @@ import FaqSection from "./components/faq-section"
 import WhatsAppButton from "./components/whatsapp-button"
 import CtaBanner from "./components/cta-banner"
 import ChefFeature from "./components/chef-feature"
-import LazyComponent from "./components/performance/lazy-component"
-import ImagePreloader from "./components/performance/image-preloader"
-import FontOptimization from "./components/performance/font-optimization"
-import PerformanceMetrics from "./components/performance/performance-metrics"
-import ContrastChecker from "./components/accessibility/contrast-checker"
 // Asegurarse de importar Image directamente de next/image
 import Image from "next/image"
 
@@ -40,12 +35,6 @@ const heroSlides = [
   },
 ]
 
-// Preload critical images
-const criticalImages = [
-  heroSlides[0].image,
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logoiowa%20%287%29-0PJXoERREuXd9rl7FCM8wkfe4ukIXr.png",
-]
-
 export default function RestaurantPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -59,12 +48,6 @@ export default function RestaurantPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Performance optimizations */}
-      <FontOptimization />
-      <ImagePreloader imageSrcs={criticalImages} />
-      <PerformanceMetrics />
-      <ContrastChecker />
-
       <SiteHeader />
       <WhatsAppButton />
 
@@ -191,39 +174,25 @@ export default function RestaurantPage() {
         <AboutSection />
 
         {/* Chef Feature Section */}
-        <LazyComponent>
-          <ChefFeature />
-        </LazyComponent>
+        <ChefFeature />
 
         {/* Services Section */}
-        <LazyComponent>
-          <ServicesSection />
-        </LazyComponent>
+        <ServicesSection />
 
         {/* Events Section */}
-        <LazyComponent>
-          <EventsSection />
-        </LazyComponent>
+        <EventsSection />
 
         {/* Reviews Section */}
-        <LazyComponent>
-          <ReviewsSection />
-        </LazyComponent>
+        <ReviewsSection />
 
         {/* FAQ Section */}
-        <LazyComponent>
-          <FaqSection />
-        </LazyComponent>
+        <FaqSection />
 
         {/* Contact Section */}
-        <LazyComponent>
-          <ContactSection />
-        </LazyComponent>
+        <ContactSection />
 
         {/* Reservation CTA */}
-        <LazyComponent>
-          <CtaBanner />
-        </LazyComponent>
+        <CtaBanner />
       </main>
 
       <SiteFooter />
