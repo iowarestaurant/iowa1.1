@@ -55,10 +55,12 @@ export default async function Image() {
           height: 200,
         }}
       >
+        {/* Usar un path en lugar de text */}
         <svg width="160" height="80" viewBox="0 0 120 60">
-          <text x="60" y="40" fontSize="40" fontWeight="bold" textAnchor="middle" fill="#8B0000">
-            IOWA
-          </text>
+          <path
+            d="M40 40V20H45V40H40ZM50 40V20H55V35H65V40H50ZM70 40V20H90V25H75V27.5H85V32.5H75V35H90V40H70Z"
+            fill="#8B0000"
+          />
         </svg>
       </div>
 
@@ -72,7 +74,7 @@ export default async function Image() {
           padding: "0 40px",
         }}
       >
-        <h1
+        <div
           style={{
             fontSize: 64,
             fontWeight: "bold",
@@ -81,8 +83,8 @@ export default async function Image() {
           }}
         >
           IOWA Parrilla & Restaurant
-        </h1>
-        <p
+        </div>
+        <div
           style={{
             fontSize: 32,
             margin: 0,
@@ -90,7 +92,7 @@ export default async function Image() {
           }}
         >
           Más de 50 años de tradición gastronómica
-        </p>
+        </div>
       </div>
     </div>,
     {
