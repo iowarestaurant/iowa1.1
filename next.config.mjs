@@ -9,11 +9,6 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
   },
-  // Desactivar optimizaciones experimentales que causan problemas
-  experimental: {
-    // optimizeCss: true, // Eliminado para evitar el error de critters
-    optimizePackageImports: ['framer-motion', 'lucide-react'],
-  },
   // Configuración para mejorar el rendimiento
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
@@ -56,6 +51,14 @@ const nextConfig = {
         ],
       },
     ]
+  },
+  // Asegurarse de que los estilos se procesen correctamente
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader'],
+    });
+    return config;
   },
 }
 
