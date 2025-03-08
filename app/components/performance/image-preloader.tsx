@@ -11,14 +11,7 @@ export default function ImagePreloader({ imageSrcs }: ImagePreloaderProps) {
     // Only preload in production or when not on slow connections
     if (process.env.NODE_ENV !== "production") return
 
-    // Check for slow connections
-    if (navigator.connection) {
-      const connection = navigator.connection as any
-      if (connection.saveData || (connection.effectiveType && connection.effectiveType.includes("2g"))) {
-        return
-      }
-    }
-
+    // Función segura para precargar imágenes
     const preloadImages = () => {
       imageSrcs.forEach((src) => {
         const img = new Image()
@@ -26,11 +19,29 @@ export default function ImagePreloader({ imageSrcs }: ImagePreloaderProps) {
       })
     }
 
+    // Verificar conexiones lentas de manera segura para TypeScript
+    try {
+      // Comprobar si la API NetworkInformation está disponible
+      // Usamos una verificación segura para TypeScript
+      if ("connection" in navigator && (navigator as any).connection) {
+        const connection = (navigator as any).connection
+        if (connection.saveData || (connection.effectiveType && connection.effectiveType.includes("2g"))) {
+          // No precargar en conexiones lentas o cuando saveData está activado
+          return
+        }
+      }
+    } catch (error) {
+      // Silenciar errores - continuar con la precarga
+      console.debug("Network information API not available")
+    }
+
     // Use requestIdleCallback if available, otherwise use setTimeout
-    if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(() => preloadImages())
-    } else {
-      setTimeout(preloadImages, 1000)
+    if (typeof window !== "undefined") {
+      if ("requestIdleCallback" in window) {
+        ;(window as any).requestIdleCallback(() => preloadImages())
+      } else {
+        setTimeout(preloadImages, 1000)
+      }
     }
   }, [imageSrcs])
 
