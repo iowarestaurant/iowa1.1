@@ -116,6 +116,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" />
 
+        {/* Asegurar que los estilos se carguen correctamente */}
+        <link rel="stylesheet" href="/_next/static/css/app/globals.css" />
+
         {/* SEO Local - Schema.org para Restaurante */}
         <script
           type="application/ld+json"
@@ -181,7 +184,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} overflow-x-hidden`}>
+      <body className={`${inter.className} overflow-x-hidden bg-background text-foreground`}>
         {/* Contenido principal */}
         <main id="main-content">{children}</main>
 
