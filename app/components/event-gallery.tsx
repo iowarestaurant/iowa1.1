@@ -171,7 +171,11 @@ export default function EventGallery() {
                       >
                         <div className="relative aspect-[4/3] overflow-hidden w-full h-full">
                           <Image
-                            src={item.type === "video" ? item.thumbnail : item.src}
+                            src={
+                              item.type === "video"
+                                ? item.thumbnail || "/placeholder.svg"
+                                : item.src || "/placeholder.svg"
+                            }
                             alt={item.alt}
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
