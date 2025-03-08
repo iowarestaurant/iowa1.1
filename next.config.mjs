@@ -23,10 +23,6 @@ const nextConfig = {
   eslint: {
     dirs: ['app', 'components', 'lib', 'utils'],
   },
-  // Optimización de fuentes
-  fontLoaders: [
-    { loader: '@next/font/google', options: { subsets: ['latin'] } },
-  ],
   // Configuración de seguridad
   headers: async () => {
     return [
