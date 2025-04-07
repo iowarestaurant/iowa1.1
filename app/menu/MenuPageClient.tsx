@@ -24,47 +24,47 @@ export default function MenuPageClient() {
 
   const menuImages = [
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.jpg-YCm3DDP2sEMt4DrMBNJ2jBPKU46mcu.jpeg",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-RxGD5TNOOfS65YOEWRgcUygftR9czX.png",
       alt: "IOWA Parrilla & Restaurant - Tres Generaciones",
       categories: ["todos"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-N43rAGqfGNoKA5PJWEAQ0KMUrFKPb0.jpeg",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-7qMo2izyMlB8UGfR9pRgMndiNDhVh7.png",
       alt: "Menú - Para ir picando y sugerencias",
       categories: ["todos", "entradas"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.jpg-hjjWgyxSlCeLgGeJuCaaUFSZC7Fpme.jpeg",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-KQav18rWwWtbmOlIfm5wUbp3gXZ9KD.png",
       alt: "Menú - Veganos, Celíacos, Ensaladas y Lomitería",
       categories: ["todos", "principales"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.jpg-V9qKk8i2msYHH05PQZDRUZaPa4L77m.jpeg",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-ZA3f2T3r1EOVapG0gaAoLl6zy9Ouiw.png",
       alt: "Menú - Lo popular y Principales",
       categories: ["todos", "principales"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5.jpg-y7tubhtaT2q6WBc41QWJr3Q84MtnfY.jpeg",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-q26yRKd7s7eHMY2q0mNg9AIRohhhH3.png",
       alt: "Menú - Elaboración Propia",
       categories: ["todos", "elaboracion"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6.jpg-gSrbRP0gVz0uDACZWf6zqFGzecFrl6.jpeg",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-HA0DO0AIb0PyQH33HGJbBaHvzQEUTc.png",
       alt: "Menú - Postres",
       categories: ["todos", "postres"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.jpg-aAc6wDRKZQjPdZu4XGX4HcqavJnQdz.jpeg",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7-w9dCfbzZbCjHR7HyLxAvxJzOp7eKqz.png",
       alt: "Menú - Bebidas y Vinos Blancos",
       categories: ["todos", "bebidas"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8.jpg-oAuUzUU87RN57bOjBvd5PXq6C1iE1Y.jpeg",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8-U6VfZKSLgnRmyODpecilhrIWTkEtPn.png",
       alt: "Menú - Vinos Tintos",
       categories: ["todos", "bebidas"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9.jpg-pLYgL974INACRcbalgxBWLLCz5IqOZ.jpeg",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-gG4krw46IMOQs4IzQvmqiNKQzB77G2.png",
       alt: "IOWA Eventos Gastronómicos",
       categories: ["todos"],
     },
