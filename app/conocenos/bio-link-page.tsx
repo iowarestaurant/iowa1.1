@@ -43,7 +43,7 @@ const socialLinks = [
     ariaLabel: "Visitar Facebook de IOWA Restaurant",
   },
   {
-    name: "Instagram Eventos",
+    name: "Iowa Eventos",
     url: "https://www.instagram.com/iowa.eventos.gastronomicos",
     icon: <Instagram className="h-6 w-6" />,
     color: "bg-black border border-white/20",
