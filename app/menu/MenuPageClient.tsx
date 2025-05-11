@@ -14,7 +14,7 @@ export default function MenuPageClient() {
 
   const menuCategories = [
     { id: "todos", label: "Todos" },
-    { id: "entradas", label: "Entradas" },
+    { id: "entradas", label: "Para Picar" },
     { id: "principales", label: "Principales" },
     { id: "elaboracion", label: "Elaboración Propia" },
     { id: "parrilla", label: "Parrilla" },
@@ -24,49 +24,54 @@ export default function MenuPageClient() {
 
   const menuImages = [
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-RxGD5TNOOfS65YOEWRgcUygftR9czX.png",
-      alt: "IOWA Parrilla & Restaurant - Tres Generaciones",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-zAhPiRocyLZDnVaUldnshioMfcQjuS.png",
+      alt: "IOWA - Desde 1970 - Cuarta Generación",
       categories: ["todos"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-7qMo2izyMlB8UGfR9pRgMndiNDhVh7.png",
-      alt: "Menú - Para ir picando y sugerencias",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-c4sHTauwYnznNm41i4JuiPtllMVJGD.png",
+      alt: "Menú - Sugerencias del Chef",
+      categories: ["todos", "principales", "elaboracion"],
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-rCbhXHuvz7Ofq1eyKLpx9Shfd8qjS2.png",
+      alt: "Menú - Para ir picando y Popular",
       categories: ["todos", "entradas"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-KQav18rWwWtbmOlIfm5wUbp3gXZ9KD.png",
-      alt: "Menú - Veganos, Celíacos, Ensaladas y Lomitería",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-1kCmIk0jNzmMWuEOvx3rupzARHrJxH.png",
+      alt: "Menú - Lomitería y Pizzas",
       categories: ["todos", "principales"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-ZA3f2T3r1EOVapG0gaAoLl6zy9Ouiw.png",
-      alt: "Menú - Lo popular y Principales",
-      categories: ["todos", "principales"],
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-qsv8sptIpYTFbHfUBTskB6b7oH8l9h.png",
+      alt: "Menú - Principales y Salsas",
+      categories: ["todos", "principales", "parrilla"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-q26yRKd7s7eHMY2q0mNg9AIRohhhH3.png",
-      alt: "Menú - Elaboración Propia",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-R8UTwlXAgJ99S990J8J0PY26p0cLUA.png",
+      alt: "Menú - Lo que más nos gusta hacer - Pastas",
       categories: ["todos", "elaboracion"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-HA0DO0AIb0PyQH33HGJbBaHvzQEUTc.png",
-      alt: "Menú - Postres",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8-1DoDfU9zL5hr5TCz5RXxWLuLmFrBVY.png",
+      alt: "Menú - Infantil, Ensaladas y Postres",
       categories: ["todos", "postres"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7-w9dCfbzZbCjHR7HyLxAvxJzOp7eKqz.png",
-      alt: "Menú - Bebidas y Vinos Blancos",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-5z0RUzVfPBBYzpO0cczUbnxcUhYyv2.png",
+      alt: "Carta de Bebidas - Sin Alcohol y Cervezas",
       categories: ["todos", "bebidas"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8-U6VfZKSLgnRmyODpecilhrIWTkEtPn.png",
-      alt: "Menú - Vinos Tintos",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-sjXSDmlGtozUI4O9ENdkOEI9gWwhHe.png",
+      alt: "Carta de Bebidas - Vinos Blancos",
       categories: ["todos", "bebidas"],
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-gG4krw46IMOQs4IzQvmqiNKQzB77G2.png",
-      alt: "IOWA Eventos Gastronómicos",
-      categories: ["todos"],
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-28SbIOIy5rID0JvdqNXv87vlvEfF1r.png",
+      alt: "Carta de Bebidas - Vinos Tintos",
+      categories: ["todos", "bebidas"],
     },
   ]
 
@@ -100,7 +105,7 @@ export default function MenuPageClient() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl max-w-3xl mx-auto"
             >
-              Descubre nuestra variedad de platos tradicionales e innovadores
+              Tradición gastronómica desde 1970
             </motion.p>
           </div>
         </div>
@@ -117,8 +122,8 @@ export default function MenuPageClient() {
           >
             <h2 className="text-3xl font-bold mb-6">Carta Completa</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Nuestra carta ofrece una amplia variedad de platos tradicionales de la parrilla argentina, pastas caseras,
-              opciones para celíacos y veganos, y una cuidada selección de vinos y bebidas.
+              Nuestra carta ofrece una amplia variedad de platos tradicionales de la parrilla argentina, pastas caseras
+              de elaboración propia, opciones para compartir, y una cuidada selección de vinos y bebidas.
             </p>
           </motion.div>
 
@@ -177,4 +182,3 @@ export default function MenuPageClient() {
     </div>
   )
 }
-
