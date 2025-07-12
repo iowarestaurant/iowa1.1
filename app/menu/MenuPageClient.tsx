@@ -18,6 +18,7 @@ export default function MenuPageClient() {
     { id: "principales", label: "Principales" },
     { id: "elaboracion", label: "Elaboración Propia" },
     { id: "parrilla", label: "Parrilla" },
+    { id: "celiacos/veganos", label: "Celiacos/veganos" },
     { id: "postres", label: "Postres" },
     { id: "bebidas", label: "Bebidas" },
   ]
@@ -57,6 +58,11 @@ export default function MenuPageClient() {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8-1DoDfU9zL5hr5TCz5RXxWLuLmFrBVY.png",
       alt: "Menú - Infantil, Ensaladas y Postres",
       categories: ["todos", "postres"],
+    },
+    {
+      src: "/Celiacos-veganos.jpg",
+      alt: "Menú - Celiacos y Veganos",
+      categories: ["todos", "celiacos/veganos"],
     },
     {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-5z0RUzVfPBBYzpO0cczUbnxcUhYyv2.png",
